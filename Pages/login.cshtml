@@ -1,0 +1,22 @@
+﻿@page
+@model deliveryCompany.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="User.UserName">Username</label>
+        <input asp-for="User.UserName" class="form-control" />
+        <span asp-validation-for="User.UserName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="User.Pass">Password</label>
+        <input asp-for="User.Pass" class="form-control" />
+        <span asp-validation-for="User.Pass" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Log in</button>
+</form>
