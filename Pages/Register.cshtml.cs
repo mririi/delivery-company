@@ -29,7 +29,8 @@ namespace deliveryCompany.Pages
             {
                 return Page();
             }
-
+            User.UserId = new Random().Next(0, 1000000);
+            User.UserType = 1;
             _context.Users.Add(User);
             _context.SaveChanges();
 

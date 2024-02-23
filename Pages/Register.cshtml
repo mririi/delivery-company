@@ -3,24 +3,34 @@
 @{
     ViewData["Title"] = "Register";
 }
+<div class="d-flex justify-content-center" style="height: 100vh;">
+    <div class="col-auto" style="width:50vw">
 
 <h2>@ViewData["Title"]</h2>
 
 <form method="post">
-    <div class="form-group">
-        <label asp-for="User.Email">Email</label>
-        <input asp-for="User.Email" class="form-control" />
-        <span asp-validation-for="User.Email" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="User.UserName">Username</label>
-        <input asp-for="User.UserName" class="form-control" />
-        <span asp-validation-for="User.UserName" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="User.Pass">Password</label>
-        <input asp-for="User.Pass" type="password" class="form-control" />
-        <span asp-validation-for="User.Pass" class="text-danger"></span>
-    </div>
-    <button type="submit" class="btn btn-primary">Register</button>
+            <div class="form-group mt-4">
+                <label asp-for="User.Email">Email</label>
+                <input asp-for="User.Email" class="form-control" />
+                <span asp-validation-for="User.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-4">
+                <label asp-for="User.UserName">Username</label>
+                <input asp-for="User.UserName" class="form-control" />
+                <span asp-validation-for="User.UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-4">
+                <label asp-for="User.PhoneNumber">Phone Number</label>
+                <input asp-for="User.PhoneNumber" type="number" class="form-control" />
+                <span asp-validation-for="User.Pass" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-4">
+                <label asp-for="User.Pass">Password</label>
+                <input asp-for="User.Pass" type="password" class="form-control" />
+                <span asp-validation-for="User.Pass" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary mt-4">Register</button>
 </form>
+    </div>
+
+</div>

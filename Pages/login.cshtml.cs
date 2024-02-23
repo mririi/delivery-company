@@ -20,8 +20,8 @@ namespace deliveryCompany.Pages
 
         public IActionResult OnGet()
         {
-            var userName = HttpContext.Session.GetString("UserName");
-            if (!string.IsNullOrEmpty(userName))
+            var email = HttpContext.Session.GetString("Email");
+            if (!string.IsNullOrEmpty(email))
             {
                 // User is already logged in, redirect to index page
                 return RedirectToPage("/Index");
@@ -33,11 +33,21 @@ namespace deliveryCompany.Pages
 
         public IActionResult OnPost()
         {
-            var userInDb = _context.Users.SingleOrDefault(u => u.UserName == User.UserName && u.Pass == User.Pass);
+            var userInDb = _context.Users.SingleOrDefault(u => u.Email == User.Email && u.Pass == User.Pass);
             if (userInDb != null)
             {
-                HttpContext.Session.SetString("UserName", User.UserName);
-                return RedirectToPage("/Index");
+                HttpContext.Session.SetString("Email", User.Email);
+                if (userInDb.UserType == 0)
+                {
+                    HttpContext.Session.SetString("UserType", "0");
+                    return RedirectToPage("/privacy");
+                }
+                else
+                {
+                    HttpContext.Session.SetString("UserType", "1");
+                    return RedirectToPage("/Index");
+                }
+                
             }
             else
             {
