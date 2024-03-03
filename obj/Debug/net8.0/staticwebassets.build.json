@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tO9l/WBdIRdkYnjcKrODiGcApEsRq68gMIwIP7Uue24=",
+  "Hash": "BHJ3O8400kalzAlBJzZlUKQtq81zipSYFDI4ObIP8Ps=",
   "Source": "deliveryCompany",
   "BasePath": "_content/deliveryCompany",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Wassi\\source\\repos\\deliveryCompany\\deliveryCompany\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\deliveryCompany.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Wassi\\source\\repos\\deliveryCompany\\deliveryCompany\\wwwroot\\css\\dashboard.css",
+      "SourceId": "deliveryCompany",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Wassi\\source\\repos\\deliveryCompany\\deliveryCompany\\wwwroot\\",
+      "BasePath": "_content/deliveryCompany",
+      "RelativePath": "css/dashboard.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\dashboard.css"
     },
     {
       "Identity": "C:\\Users\\Wassi\\source\\repos\\deliveryCompany\\deliveryCompany\\wwwroot\\css\\site.css",

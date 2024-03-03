@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\deliveryCompany.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Wassi\\source\\repos\\deliveryCompany\\deliveryCompany\\wwwroot\\css\\dashboard.css",
+      "PackagePath": "staticwebassets\\css\\dashboard.css"
+    },
+    {
       "Id": "C:\\Users\\Wassi\\source\\repos\\deliveryCompany\\deliveryCompany\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

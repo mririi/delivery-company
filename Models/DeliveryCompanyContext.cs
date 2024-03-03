@@ -42,6 +42,18 @@ public partial class DeliveryCompanyContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("customer_name");
+            entity.Property(e => e.CustomerPhone)
+            .HasMaxLength(15)
+                .IsUnicode(false)
+                .HasColumnName("customer_phone");
+            entity.Property(e => e.CustomerEmail)
+            .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("customer_email");
+            entity.Property(e => e.CustomerAddress)
+            .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("customer_address");
         });
 
         modelBuilder.Entity<Maintenance>(entity =>
@@ -75,6 +87,7 @@ public partial class DeliveryCompanyContext : DbContext
             entity.Property(e => e.OrderId)
                 .ValueGeneratedNever()
                 .HasColumnName("order_id");
+            entity.Property(e => e.Price).HasColumnType("float").HasColumnName("price");
             entity.Property(e => e.AssignedDriverId).HasColumnName("assigned_driver_id");
             entity.Property(e => e.CustomerId).HasColumnName("customer_id");
             entity.Property(e => e.DeliveryAddress)

@@ -7,11 +7,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\dashboard.cshtml.cs" />
     <Compile Remove="Pages\Index1.cshtml.cs" />
+    <Compile Remove="Pages\Index2.cshtml.cs" />
+    <Compile Remove="Pages\login.cshtml.cs" />
+    <Compile Remove="Pages\Logout.cshtml.cs" />
+    <Compile Remove="Pages\Privacy.cshtml.cs" />
+    <Compile Remove="Pages\Register.cshtml.cs" />
+    <Compile Remove="Pages\Shared\_DashboardLayout.cshtml.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\dashboard.cshtml" />
     <Content Remove="Pages\Index1.cshtml" />
+    <Content Remove="Pages\Index2.cshtml" />
+    <Content Remove="Pages\login.cshtml" />
+    <Content Remove="Pages\Logout.cshtml" />
+    <Content Remove="Pages\Privacy.cshtml" />
+    <Content Remove="Pages\Register.cshtml" />
+    <Content Remove="Pages\Shared\_DashboardLayout.cshtml" />
+    <Content Remove="Pages\Shared\_Layout - Copy.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Pages\Shared\_Layout - Copy.cshtml.css" />
   </ItemGroup>
 
   <ItemGroup>

@@ -18,8 +18,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Wassi\source\repos\deliveryCompany\deliveryCompany
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Wassi/source/repos/deliveryCompany/deliveryCompany/Pages/dashboard.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcZGFzaGJvYXJkLmNzaHRtbA==
+[C:/Users/Wassi/source/repos/deliveryCompany/deliveryCompany/Pages/Driver.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRHJpdmVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Wassi/source/repos/deliveryCompany/deliveryCompany/Pages/Error.cshtml]
@@ -28,22 +28,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Wassi/source/repos/deliveryCompany/deliveryCompany/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Wassi/source/repos/deliveryCompany/deliveryCompany/Pages/login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcbG9naW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Wassi/source/repos/deliveryCompany/deliveryCompany/Pages/Logout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Wassi/source/repos/deliveryCompany/deliveryCompany/Pages/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Wassi/source/repos/deliveryCompany/deliveryCompany/Pages/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Wassi/source/repos/deliveryCompany/deliveryCompany/Pages/Shared/_ValidationScriptsPartial.cshtml]

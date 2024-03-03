@@ -40,7 +40,7 @@ namespace deliveryCompany.Pages
                 if (userInDb.UserType == 0)
                 {
                     HttpContext.Session.SetString("UserType", "0");
-                    return RedirectToPage("/privacy");
+                    return RedirectToPage("/Dashboard");
                 }
                 else
                 {

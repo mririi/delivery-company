@@ -2,9 +2,53 @@
 @model deliveryCompany.Pages.dashboardModel
 @{
 ViewData["Title"] = "Dashboard";
+Layout = "~/Pages/Shared/_DashboardLayout.cshtml";
 }
+<head>
+    <!--<style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+        }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to the Dashboard</h1>
-    <p>Here you can manage your deliveries and view your profile.</p>
-</div>
+        #sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #333;
+            color: #fff;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        #content {
+            flex: 1;
+            padding: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+            a:hover {
+                background-color: #555;
+            }
+    </style>-->
+</head>
+<body>
+    <div id="sidebar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div id="content">
+        <h2>Main Content</h2>
+        <p>This is the main content area.</p>
+    </div>
+</body>

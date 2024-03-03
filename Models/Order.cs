@@ -13,6 +13,8 @@ public partial class Order
 
     public DateOnly OrderDate { get; set; }
 
+    public float Price { get; set; }
+
     public string? OrderStatus { get; set; }
 
     public int? AssignedDriverId { get; set; }

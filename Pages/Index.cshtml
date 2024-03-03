@@ -3,8 +3,185 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Orders Number : @Model.Orders?.Count()</h1>
 </div>
+
+
+<div class="container mt-4">
+    <form>
+        <div class="my-1 row">
+        <div class="form-group col-4">
+            <label for="orderId">Order Ref:</label>
+            <input type="number" class="form-control" name="orderId" id="orderId" />
+        </div>
+
+            <div class="form-group col-4">
+            <label for="deliveryDate">Delivery Date:</label>
+            <input type="date" class="form-control" name="deliveryDate" id="deliveryDate" />
+        </div>
+
+            <div class="form-group col-4">
+            <label for="orderStatus">Order Status:</label>
+            <select class="form-control" name="orderStatus" id="orderStatus">
+                <option value="">All</option>
+                <option value="Pending">Pending</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Delivered">Delivered</option>
+                <option value="Returned">Returned</option>
+            </select>
+        </div>
+    </div>
+        <div class="my-1 row">
+            <div class="form-group my-1 col-4">
+            <label for="customerName">Customer Name:</label>
+            <input type="text" class="form-control" name="customerName" id="customerName" />
+        </div>
+
+            <div class="form-group my-1 col-4">
+            <label for="driverRef">Driver Ref:</label>
+            <input type="number" class="form-control" name="driverRef" id="driverRef" />
+        </div>
+
+            <div class="form-group my-1 col-4">
+            <label for="vehicleRef">Vehicle Ref:</label>
+            <input type="number" class="form-control" name="vehicleRef" id="vehicleRef" />
+        </div>
+</div>
+        <button type="submit" class="btn btn-primary my-1">Apply Filter</button>
+    </form>
+</div>
+
+@if(Model.Orders == null && Model.Orders?.Count <= 0)
+        {
+    <h4>No Orders</h4>
+}
+else
+{
+    <div class="mt-4">
+    <table class="table table-bordered mt-4">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Order REF</th>
+                <th scope="col">Status</th>
+                <th scope="col">Delivery Address</th>
+                <th scope="col">Date</th>
+                <th scope="col">Price</th>
+                <th scope="col">Driver</th>
+                <th scope="col">Customer</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model.Orders)
+            {
+                <tr>
+                    <td>@order.OrderId</td>
+                    <td>@order.OrderStatus</td>
+                    <td>@order.DeliveryAddress</td>
+                    <td>@order.OrderDate</td>
+                    <td>@order.Price DT</td>
+                    <td>
+                        <table class="table table-bordered mt-2">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Ref</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Phone Number</th>
+                                    <th scope="col">Vehicles</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@order.AssignedDriverId</td>
+                                    <td>@order.AssignedDriver?.Email</td>
+                                    <td>@order.AssignedDriver?.PhoneNumber</td>
+                                    <td>
+                                        @if (order?.AssignedDriver?.Vehicles != null)
+                                        {
+                                            <table class="table table-bordered mt-2">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">Ref</th>
+                                                        <th scope="col">Model</th>
+                                                        <th scope="col">Number</th>
+                                                        <th scope="col">Status</th>
+                                                        <th scope="col">Maintenances</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (var vehicle in order?.AssignedDriver?.Vehicles)
+                                                    {
+                                                        <tr>
+                                                            <td>@vehicle.VehicleId</td>
+                                                            <td>@vehicle.Model</td>
+                                                            <td>@vehicle.VehicleNumber</td>
+                                                            <td>@vehicle.VehicleStatus</td>
+                                                            <td>
+                                                                @if (vehicle.Maintenances != null)
+                                                                {
+                                                                    <table class="table table-bordered mt-2">
+                                                                        <thead class="thead-dark">
+                                                                            <tr>
+                                                                                <th scope="col">Date</th>
+                                                                                <th scope="col">Price</th>
+                                                                                <th scope="col">Description</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            @foreach (var maintenance in vehicle.Maintenances)
+                                                                            {
+                                                                                <tr>
+                                                                                    <td>@maintenance.MaintenanceDate</td>
+                                                                                    <td>@maintenance.Cost DT</td>
+                                                                                    <td>@maintenance.DescriptionMaintenance</td>
+                                                                                </tr>
+                                                                            }
+                                                                        </tbody>
+                                                                    </table>
+                                                                }
+                                                                else
+                                                                {
+                                                                <td colspan="3">No maintenances</td>
+                                                                }
+                                            </td>
+                                        </tr>
+                                                    }
+                                </tbody>
+                            </table>
+                                        }
+                                        else
+                                        {
+                        <td colspan="3">No vehicles</td>
+                                        }
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+                        </td>
+        <td>
+            <table class="table table-bordered mt-2">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Orders</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@order.Customer.CustomerName</td>
+                        <td>@order.Customer.CustomerEmail</td>
+                        <td>@order.Customer.CustomerPhone</td>
+                        <td>@order.Customer.Orders.Count()</td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+                    </tr>
+            }
+        </tbody>
+    </table>
+    </div>
+
+}
